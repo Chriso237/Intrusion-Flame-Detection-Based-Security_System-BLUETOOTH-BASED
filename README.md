@@ -3,9 +3,6 @@
 ![ESP32](https://img.shields.io/badge/ESP32-Bluetooth%20Enabled-blue)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-ESP32-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![Language](https://img.shields.io/badge/C++-blue)
-![WebApp](https://img.shields.io/badge/NodeJS-green)
-![WebApp](https://img.shields.io/badge/ReactJS-lightblue)
 
 A **low-cost, dual-hazard security system** built around an ESP32 microcontroller. It detects **flames** and **door opening events** (intrusion) using IR-based sensors and communicates **system status** (`ARMED`, `DISARMED`, `RESET`, `HELP`) to your smartphone via Bluetooth.
 
@@ -179,6 +176,3 @@ Project Team – Intrusion & Flame Detection Security System
 Built as an embedded systems / IoT security project
 
 ### Agnissan Christ Israel Robotics engineering student, Yedoh Esme Mariam Data Science and Big Data Technologies student, Zainab Yusuf Ibrahim Chemical Engineering student
-
-
-Web and Mobile Apps are still in development....
