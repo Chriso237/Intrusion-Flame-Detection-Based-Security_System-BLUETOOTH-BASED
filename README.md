@@ -102,4 +102,60 @@ The ESP32 communicates over **Bluetooth Serial (SPP)** at **9600 baud**.
 git clone https://github.com/yourusername/intrusion-flame-security.git
 cd intrusion-flame-security
 
-###2
+```
+
+### 2. Install PlatformIO (recommended) or Arduino IDE
+•PlatformIO – VS Code extension
+•Or Arduino IDE with ESP32 board support
+
+
+### 3. Upload the code
+Open the project and upload the main sketch to your ESP32.
+
+### 4. Pair your smartphone
+  •Enable Bluetoooth on your phone
+  •Pair with ESP32_Security (or custom name)
+  •Open a blueetooth serial app and connect
+
+### 5. Test the system
+
+  •Send HELP – you should receive the command list
+  •Send ARM – system starts monitoring
+  •🔥 Flame test – bring a lighter near the flame sensor → buzzer + LED + alert
+  •🚪 Door test – place an object in front of the IR sensor (door CLOSED), then remove it (door OPEN) → intrusion alert
+  •Send DISARM – system stops alerts
+  •Send RESET – clears any active alert state
+
+
+## 🔐 How Intrusion Detection Works
+
+  •The MH Flying Fish IR sensor continuously emits IR light and looks for reflection.
+  •When a door is closed, an object (e.g., cardboard, wood panel) is placed directly in front of the sensor → IR reflects back → sensor   •reads LOW (door present).
+  •When the door is opened, the object is removed → no IR reflection → sensor reads HIGH → intrusion triggered.
+  •This mimics a real door monitoring system: if the door is opened without disarming, an alert is raised.
+
+## 🧪 Lessons Learned
+
+  •Door simulation: Using a physical object to represent a closed door works reliably, but sensor positioning is critical.
+  •Sensor tuning – potentiometers must be adjusted to detect presence/absence without false triggers.
+  •Arming logic – alerts should only trigger when ARMED; DISARMED ignores all sensors.
+  •Command parsing – Bluetooth input must handle line endings (\n, \r\n) correctly.
+  •Debouncing – brief delays prevent multiple rapid intrusion events on door open.
+
+## 🔮 Future Improvements
+
+  •📡 Wi-Fi + Cloud alerts (Telegram, Blynk, or Firebase)
+  •📱 Custom mobile app with ARM/DISARM buttons and alert history
+  •🔑 PIN code authentication before disarming
+  •📷 Camera module to capture image on intrusion
+  •🔋 Battery backup for power outages
+  •🧠 Multiple zones – monitor several doors with one system  
+
+## 👥 Authors
+
+Project Team – Intrusion & Flame Detection Security System
+Built as an embedded systems / IoT security project
+
+### Agnissan Christ Israel Robotics engineering student, Yedoh Esme Mariam Data Science and Big Data Technologies student, Zainab Yusuf Ibrahim Chemical Engineering student
+
+Web and Mobile Apps are still in development....
