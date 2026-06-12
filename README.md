@@ -3,7 +3,7 @@
 ![ESP32](https://img.shields.io/badge/ESP32-Bluetooth%20Enabled-blue)
 ![PlatformIO](https://img.shields.io/badge/PlatformIO-ESP32-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
-![System](https://img.shields.io/badge/C++-blue)
+![Language](https://img.shields.io/badge/C++-blue)
 ![WebApp](https://img.shields.io/badge/NodeJS-green)
 
 A **low-cost, dual-hazard security system** built around an ESP32 microcontroller. It detects **flames** and **door opening events** (intrusion) using IR-based sensors and communicates **system status** (`ARMED`, `DISARMED`, `RESET`, `HELP`) to your smartphone via Bluetooth.
